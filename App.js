@@ -1,20 +1,10 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+import { Provider } from 'react-redux';
+import store from './redux/store';
+import Src1 from './src/src1';
+const App = () => (
+  <Provider store={store}>
+    {/* Src1 khai báo ở trên đổi thành tên gì cx đc nhưng nhớ viết hoa chữ cái đầu */}
+    <Src1 /> 
+  </Provider>
+);
+export default App;
